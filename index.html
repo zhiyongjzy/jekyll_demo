@@ -7,12 +7,34 @@
 
 　　<p>最新文章</p>
 
-　　<ul>
+　　<ul class="post-list">
 
 　　　　{% for post in site.posts %}
+		<li>
+		  	<div class="post-title">
+		    	<a href="{{site.baseurl}}{{post.url}}"> {{post.title}}</a> </br>
+		  	</div>
 
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		  	<div class="post-info">
+		    	<ol>
+		   		   <li class="post-time">{{ post.date | date: "%F" }}</li> 
+		      		<li class="post-category"> 
+		       			{{ post.categories | join: '&nbsp&nbsp' }}
+		      		</li>
+		    	</ol>
+		  	</div>
+
+		  	<div class="post-preview">
+		    	{{ post.excerpt }} 
+		    	<a href="{{site.baseurl}}{{post.url}}"> Read More ... </a> </br>
+		  	</div>
+
+    	</li>
 
 　　　　{% endfor %}
 
 　　</ul>
+
+
+
+
