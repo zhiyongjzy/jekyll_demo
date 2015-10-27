@@ -6,7 +6,31 @@
 		<title>{{ page.title }}</title>
 	</head>
 	<body>
-		{{ content }}
+		<div class="container">
+      		<header>
+        		<div class="container">
+          			<h1>
+              			<a href="/" title="Home Page"> Coder and Logger </a>
+          				<span class="github-src">
+            				<a 		href ="https://github.com/minixalpha/minixalpha.github.io"
+               						target="_blank"
+               						title="Fork me on GitHub">
+              					<img src="/assets/images/GitHub-Mark-Light-32px.png" alt="">
+            				</a>
+          				</span>
+          			</h1>
+        		</div>
+      		</header>
+
+      		<aside id="left-side">
+        		{% include categories.ext %}
+      		</aside>
+      		<aside id="right-side">
+        		{% include archives.ext %}
+      		</aside>
+      		<article>
+				{{ content }}
+      		</article>
 	</body>
 
 
