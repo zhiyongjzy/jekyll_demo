@@ -1,9 +1,9 @@
-baseurl: /jekyll_demo
+baseurl: "/jekyll_demo"
 markdown: redcarpet
 redcarpet:
     extensions: [tables]
 safe: false
-pygments: true
+highlighter: pygments
 excerpt_separator: "\n\n\n"
 paginate: 5
 sitemapurl: "http://zhiyongjzy.github.io"
